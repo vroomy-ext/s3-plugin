@@ -24,7 +24,7 @@ type Plugin struct {
 }
 
 // Load will initialize the s3 client
-func (p *Plugin) Load(env map[string]string) (err error) {
+func (p *Plugin) Load(env vroomy.Environment) (err error) {
 	var opts s3.Options
 	opts.Key = env["s3-key"]
 	opts.Secret = env["s3-secret"]
